@@ -22,3 +22,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+
+// 현재는 특별한 동작 없이 vanilla JS 환경 유지
+// 필요시 alert 등 기능 추가 가능

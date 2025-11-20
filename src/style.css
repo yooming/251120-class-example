@@ -23,11 +23,33 @@ a:hover {
 }
 
 body {
+  font-family: 'Poppins', 'Noto Sans KR', Arial, sans-serif;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #ff6f61;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
@@ -80,6 +102,126 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  color: #ff6f61;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ff9a9e;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff6f61;
+  outline: none;
+  background: #ffe5e5;
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, #ff6f61, #ff9a9e);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #ff4b4b, #ff7f7f);
+}
+
+/* 프로필 카드 스타일 */
+.profile-card {
+  max-width: 420px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(160, 140, 209, 0.18);
+  padding: 40px 32px 32px 32px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 1.2s ease;
+}
+
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 18px;
+  border: 3px solid #fbc2eb;
+  background: #f7f8fa;
+  box-shadow: 0 2px 8px rgba(160, 140, 209, 0.08);
+}
+
+.profile-name {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #a18cd1;
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+.profile-desc {
+  font-size: 1.15rem;
+  color: #ff6f61;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.profile-info {
+  background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+  border-radius: 12px;
+  padding: 18px 16px;
+  color: #333;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(160, 140, 209, 0.08);
+}
+
+.contact {
+  margin-top: 18px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.contact a {
+  color: #a18cd1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (prefers-color-scheme: light) {

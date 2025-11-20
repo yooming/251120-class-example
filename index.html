@@ -3,96 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>당신은 누구신가요?</title>
+    <title>나만의 자기소개 페이지</title>
+    <link rel="stylesheet" href="/src/style.css">
     <style>
       body {
-        font-family: 'Comic Sans MS', 'Noto Sans KR', Arial, sans-serif;
-        background: #fff8e1;
+        font-family: 'Poppins', 'Noto Sans KR', Arial, sans-serif;
+        background: linear-gradient(120deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
         margin: 0;
         padding: 0;
         color: #333;
       }
-      .container {
+      .main-container {
         max-width: 600px;
-        margin: 40px auto;
-        background: #ffecb3;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        padding: 24px;
+        margin: 60px auto;
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 8px 32px rgba(160, 140, 209, 0.18);
+        padding: 40px 32px 32px 32px;
+      }
+      .main-title {
+        font-size: 2.3rem;
+        font-weight: 700;
+        color: #a18cd1;
+        margin-bottom: 18px;
         text-align: center;
       }
-      .header {
-        margin-bottom: 24px;
+      .section-title {
+        font-size: 1.3rem;
+        color: #ff6f61;
+        font-weight: 600;
+        margin-bottom: 10px;
+        margin-top: 32px;
       }
-      .header h1 {
-        font-size: 2rem;
-        color: #d84315;
+      .profile-desc-input {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+      .profile-desc-input input {
+        font-size: 1.08rem;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #a18cd1;
+        background: #f7f8fa;
+        color: #333;
+        box-shadow: 0 2px 8px rgba(160, 140, 209, 0.08);
+        transition: border 0.2s;
+      }
+      .profile-desc-input input:focus {
+        border: 1.5px solid #ff6f61;
+        background: #fbc2eb;
+        outline: none;
+      }
+      .profile-desc-example {
+        font-size: 0.98rem;
+        color: #888;
+        margin-left: 2px;
+      }
+      .career-list {
+        list-style: none;
+        padding: 0;
         margin: 0;
       }
-      .form-group {
-        margin-bottom: 16px;
-        text-align: left;
+      .career-item {
+        background: #f7f8fa;
+        border-radius: 10px;
+        border-left: 6px solid #a18cd1;
+        margin-bottom: 14px;
+        padding: 14px 18px;
+        font-size: 1.05rem;
+        color: #444;
+        box-shadow: 0 2px 8px rgba(160, 140, 209, 0.06);
       }
-      .form-group label {
-        font-size: 1.2rem;
-        color: #5d4037;
-        display: block;
-        margin-bottom: 8px;
+      .career-year {
+        font-weight: 700;
+        color: #a18cd1;
+        margin-right: 8px;
       }
-      .form-group input, .form-group textarea {
-        width: 100%;
-        padding: 8px;
+      .contact {
+        margin-top: 28px;
         font-size: 1rem;
-        border: 1px solid #d7ccc8;
-        border-radius: 8px;
-        background: #fff;
-        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: #666;
+        text-align: center;
       }
-      .form-group input:focus, .form-group textarea:focus {
-        border-color: #ffab91;
-        outline: none;
-        background: #fff3e0;
-      }
-      .submit-btn {
-        background: #ff7043;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        padding: 10px 20px;
-        font-size: 1.1rem;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: background 0.3s;
-      }
-      .submit-btn:hover {
-        background: #d84315;
+      .contact a {
+        color: #a18cd1;
+        text-decoration: none;
+        font-weight: 500;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <h1>당신은 누구신가요?</h1>
+    <div class="main-container">
+      <div class="main-title">나를 소개합니다</div>
+      <div class="section-title">자기소개</div>
+      <div class="profile-desc-input">
+        <input type="text" placeholder="예시: 교육을 사랑하는 대학원생입니다." />
+        <span class="profile-desc-example">한 줄로 간단하게 자기소개를 입력해 주세요.</span>
       </div>
-      <form>
-        <div class="form-group">
-          <label for="name">이름</label>
-          <input type="text" id="name" name="name" placeholder="여기에 이름을 입력하세요" />
-        </div>
-        <div class="form-group">
-          <label for="intro">자기소개</label>
-          <textarea id="intro" name="intro" rows="3" placeholder="자기소개를 입력하세요"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="likes">좋아하는 것</label>
-          <textarea id="likes" name="likes" rows="2" placeholder="좋아하는 것을 입력하세요"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="etc">기타</label>
-          <textarea id="etc" name="etc" rows="2" placeholder="기타 내용을 입력하세요"></textarea>
-        </div>
-        <button type="submit" class="submit-btn">제출하기</button>
-      </form>
+      <div class="section-title">활동한 경력</div>
+      <ul class="career-list">
+        <li class="career-item"><span class="career-year">2019 -</span> 중·고등학교 교사 근무</li>
+        <li class="career-item"><span class="career-year">2025 -</span> 대학원생(교육 연구)</li>
+      </ul>
+      <div class="contact">
+        이메일: <a href="mailto:your@email.com">your@email.com</a><br>
+        GitHub: <a href="https://github.com/yourid" target="_blank">github.com/yourid</a>
+      </div>
     </div>
   </body>
 </html>
